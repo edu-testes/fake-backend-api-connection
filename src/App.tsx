@@ -1,10 +1,29 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import axios from 'axios'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
+import AuthPage from './pages/AuthPage.tsx'
+import RegisterPage from './pages/RegisterPage.tsx'
+import UserPage from './pages/UserPage.tsx'
+
+const authRoutes = [
+  { path: '/login', element: <AuthPage /> },
+  { path: '/register', element: <RegisterPage /> },
+  { path: '/user', element: <UserPage /> },
+]
+
+const mainRoutes = [
+  // { path: '/user', element: <UserPage /> },
+];
+
+const api = 'http://localhost:3000/';
 
 function App() {
   const [count, setCount] = useState(0)
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
 
   return (
     <>
