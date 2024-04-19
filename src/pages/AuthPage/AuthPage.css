@@ -1,0 +1,33 @@
+.login-form {
+  width: 320px;
+} display: flex;
+  justify-content: center;
+}
+
+.login-form label span {
+  padding-right: 6px;
+  color: red;
+}
+
+.login-form label {
+  display: inline-block; 
+  width: 120px;
+}
+
+input {
+  padding: 5px;
+  border: 1px solid #8b90f7;
+  border-radius: 4px;
+}
+
+.login-form__input {
+  margin: 10px 0 10px 0;
+}
+
+.checkbox-span {
+  padding-left: 5px;
+}
+
+.login-form__checkbox {
+  margin: 10px 0 10px 0;
+}
