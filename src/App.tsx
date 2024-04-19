@@ -1,54 +1,44 @@
-import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import axios from 'axios'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import axios from "axios";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import AuthPage from './pages/AuthPage.tsx'
-import RegisterPage from './pages/RegisterPage.tsx'
-import UserPage from './pages/UserPage.tsx'
+import NavBar from "./components/NavBar/NavBar.tsx";
+
+import HomePage from "./pages/HomePage.tsx";
+import AuthPage from "./pages/AuthPage/AuthPage.tsx";
+import RegisterPage from "./pages/RegisterPage.tsx";
+import UserPage from "./pages/UserPage.tsx";
 
 const authRoutes = [
-  { path: '/login', element: <AuthPage /> },
-  { path: '/register', element: <RegisterPage /> },
-  { path: '/user', element: <UserPage /> },
-]
+  { path: "/login", element: <AuthPage /> },
+  { path: "/register", element: <RegisterPage /> },
+  { path: "/user", element: <UserPage /> },
+];
 
 const mainRoutes = [
   // { path: '/user', element: <UserPage /> },
 ];
 
-const api = 'http://localhost:3000/';
+const api = "http://localhost:3000/";
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
-
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const AuthContext = React.createContext(null);
+  React.useContext(AuthContext);
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <NavBar />
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/login" element={<AuthPage />}></Route>
+          <Route path="/register" element={<RegisterPage />}></Route>
+          <Route path="/user" element={<UserPage />}></Route>
+        </Routes>
+      </main>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
