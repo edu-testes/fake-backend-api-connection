@@ -1,0 +1,30 @@
+input[type=button],
+input[type=submit] {
+  background-color: #6baffd;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px 30px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+
+input[type=button]:hover,
+input[type=submit]:hover {
+  background-color: #468fe2;
+}
+
+input[type=button]:active,
+input[type=submit]:active {
+  background-color: #2f65a3;
+}
+
+input[type=button]:focus,
+input[type=button]::focus-visible,
+input[type=submit]:focus,
+input[type=submit]::focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
