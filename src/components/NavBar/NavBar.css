@@ -1,0 +1,14 @@
+nav {
+}
+
+nav ul {
+  /*position: static;*/
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.route-link {
+  margin: 8px 
+}
