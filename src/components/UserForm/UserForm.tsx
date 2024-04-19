@@ -1,7 +1,7 @@
-import Button from "../../components/Button/Button.tsx";
-import "./AuthPage.css";
+import Button from "../Button/Button.tsx";
+import "./UserForm.css";
 
-export default function AuthPage() {
+export default function UserForm() {
   return (
     <form action="#" className="login-form">
       <div className="login-form--container">
