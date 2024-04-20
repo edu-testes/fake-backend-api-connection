@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar.tsx";
 
 import HomePage from "./pages/HomePage.tsx";
-import AuthPage from "./components/UserForm/UserForm.tsx";
+import AuthPage from "./pages/AuthPage.tsx";
 import RegisterPage from "./pages/RegisterPage.tsx";
 import UserPage from "./pages/UserPage.tsx";
 

@@ -3,7 +3,7 @@ import UserForm  from "../components/UserForm/UserForm.tsx";
 export default function AuthPage() {
   return (
     <>
-      <p>Login page</p>
+      <p>Auth page</p>
       <UserForm />
     </>
   ) 
