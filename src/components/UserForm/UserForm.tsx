@@ -24,10 +24,18 @@ export default function UserForm(props: UserFormProps) {
     });
   };
 
+  function clearForm() {
+    setFormDataObject({
+      email: "",
+      password: "",
+      "remember-me": false
+    });
+  }
+
   function handleFormSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     props.sendData(formDataObject);
-    //console.log(formDataObject);
+    clearForm();
   }
 
   return (
@@ -37,16 +45,16 @@ export default function UserForm(props: UserFormProps) {
           <label htmlFor="login">
             <span>*</span>Username:
           </label>
-          <input type="text" name="email" id="email" onChange={handleChange}/>
+          <input type="text" name="email" id="email" value={formDataObject.email} onChange={handleChange}/>
         </div>
         <div className="login-form__input">
           <label htmlFor="password">
             <span>*</span>Password:
           </label>
-          <input type="text" name="password" id="password"  onChange={handleChange}/>
+          <input type="text" name="password" id="password" value={formDataObject.password} onChange={handleChange}/>
         </div>
         <div className="login-form__checkbox">
-          <input type="checkbox" id="rememberme" name="remember-me" onChange={handleChange}/>
+          <input type="checkbox" id="rememberme" name="remember-me" checked={formDataObject["remember-me"]} onChange={handleChange}/>
           <span className="checkbox-span">Remember me</span>
         </div>
         <div>
