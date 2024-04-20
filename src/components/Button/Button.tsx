@@ -1,8 +1,10 @@
 
 import "./Button.css";
-
-export default function Button() {
+type IButtonProps = {
+  typeButton: string,
+}
+export default function Button(props: IButtonProps) {
   return (
-    <input type="button" value="Submit" />
+    <input type={props.typeButton} value="Submit" />
   )
 }
