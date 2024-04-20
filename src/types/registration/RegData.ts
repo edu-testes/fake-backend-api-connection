@@ -1,4 +1,5 @@
 export type RegData = {
   email: string,
-  password: string, 
+  password: string,
+  "remember-me": boolean,
 }
