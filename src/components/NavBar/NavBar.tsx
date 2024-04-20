@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { logout } from "../../services/authorization.ts";
 import "./NavBar.css";
 
 export default function NavBar() {
@@ -25,6 +26,7 @@ export default function NavBar() {
             User
           </Link>
         </li>
+        <li><a href="#" onClick={logout}>Logout</a></li>
       </ul>
     </nav>
   );
