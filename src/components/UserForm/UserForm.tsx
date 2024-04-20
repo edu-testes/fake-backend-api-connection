@@ -1,14 +1,16 @@
 import {useState, ChangeEvent, FormEvent} from "react";
 import Button from "../Button/Button.tsx";
 import "./UserForm.css";
+import { RegData } from "../../types/registration/RegData.ts";
 
 type UserFormProps = {
   reqType: string,
+  sendData: (registrationData:RegData) => void,
 }
 
 export default function UserForm(props: UserFormProps) {
   const [formDataObject, setFormDataObject] = useState({
-    login: "",
+    email: "",
     password: "",
     "remember-me": false
   });
@@ -24,26 +26,27 @@ export default function UserForm(props: UserFormProps) {
 
   function handleFormSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log(formDataObject);
+    props.sendData(formDataObject);
+    //console.log(formDataObject);
   }
 
   return (
     <form action="#" className="login-form" onSubmit={handleFormSubmit}>
       <div className="login-form--container">
         <div className="login-form__input">
-          <label htmlFor="">
+          <label htmlFor="login">
             <span>*</span>Username:
           </label>
-          <input type="text" name="login" id="" onChange={handleChange}/>
+          <input type="text" name="email" id="email" onChange={handleChange}/>
         </div>
         <div className="login-form__input">
-          <label htmlFor="">
+          <label htmlFor="password">
             <span>*</span>Password:
           </label>
-          <input type="text" name="password" id=""  onChange={handleChange}/>
+          <input type="text" name="password" id="password"  onChange={handleChange}/>
         </div>
         <div className="login-form__checkbox">
-          <input type="checkbox" id="" name="remember-me" value="" onChange={handleChange}/>
+          <input type="checkbox" id="rememberme" name="remember-me" onChange={handleChange}/>
           <span className="checkbox-span">Remember me</span>
         </div>
         <div>
