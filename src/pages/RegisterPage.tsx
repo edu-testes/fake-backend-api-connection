@@ -4,7 +4,7 @@ export default function RegisterPage() {
   return (
     <>
       <p>Register page</p>
-      <UserForm />
+      <UserForm reqType={"register"}/>
     </>
   ) 
 }

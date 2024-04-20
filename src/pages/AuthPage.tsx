@@ -4,7 +4,7 @@ export default function AuthPage() {
   return (
     <>
       <p>Auth page</p>
-      <UserForm />
+      <UserForm reqType={"auth"}/>
     </>
   ) 
 }
