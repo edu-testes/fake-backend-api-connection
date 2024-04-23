@@ -51,7 +51,7 @@ export default function UserForm(props: UserFormProps) {
           <label htmlFor="password">
             <span>*</span>Password:
           </label>
-          <input type="text" name="password" id="password" value={formDataObject.password} onChange={handleChange}/>
+          <input type="password" name="password" id="password" value={formDataObject.password} onChange={handleChange}/>
         </div>
         <div className="login-form__checkbox">
           <input type="checkbox" id="rememberme" name="remember-me" checked={formDataObject["remember-me"]} onChange={handleChange}/>
