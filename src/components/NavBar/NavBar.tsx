@@ -22,7 +22,7 @@ export default function NavBar() {
           </Link>
         </li>
         <li>
-          <Link to="/user" className="route-link">
+          <Link to="/users" className="route-link">
             User
           </Link>
         </li>
