@@ -34,7 +34,7 @@ function App() {
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/login" element={<AuthPage />}></Route>
           <Route path="/register" element={<RegisterPage />}></Route>
-          <Route path="/user" element={<UserPage />}></Route>
+          <Route path="/users" element={<UserPage />}></Route>
         </Routes>
       </main>
     </BrowserRouter>
