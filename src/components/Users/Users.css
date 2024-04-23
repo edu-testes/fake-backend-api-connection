@@ -1,0 +1,19 @@
+.user-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+}
+
+.user-details {
+  padding: 10px;
+}
+
+.user-details__name {
+  font-weight: 700;
+}
+
+.user-details__name, 
+.user-details__descr {
+  padding: 5px;
+}
