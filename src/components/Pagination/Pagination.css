@@ -1,0 +1,9 @@
+ul.pagination {
+  margin: 10px 15px;
+  display: inline;
+}
+
+ul.pagination li {
+  display: inline-block;
+  margin: 0 5px;
+}
