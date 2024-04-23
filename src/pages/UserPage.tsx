@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { getUsers } from "../services/getData"
 import Users from "../components/Users/Users";
+import Pagination from "../components/Pagination/Pagination";
+import "./pages.css";
 
 export default function UserPage() {
   const [ users, setUsers ] = useState([]);
@@ -8,7 +10,10 @@ export default function UserPage() {
     getUsers().then((users) => setUsers(users)).catch((error) => console.log(error));
   }, [])
   return (
-     <Users users={users} />
+    <div className="pageContainer">
+      <Users users={users} />
+      <Pagination />
+    </div>
 )
 }
 
