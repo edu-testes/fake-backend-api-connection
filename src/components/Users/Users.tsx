@@ -1,12 +1,8 @@
 
 import "./Users.css";
-//import { useEffect } from "react";
 import { UsersData } from "../../types/users/UsersData"
 
 export default function Users(props: UsersData) {
-  //console.log(props);
-  //useEffect(() => {
-  //}, [])
   return (
     <>
     { 
