@@ -2,7 +2,9 @@ import { reqGetUsers }  from "../api/requests";
 
 export async function getUsers() {
   try {
-    return await reqGetUsers();
+    const res = await reqGetUsers();
+    console.log(res);
+    return res;
   } catch(err) {
     console.log(err)
   }
